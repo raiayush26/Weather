@@ -1,5 +1,0 @@
-const timeID = setTimeout(() => {
-        
-        setIsLoading(false);
-    }, 2000);
-    return () => {clearTimeout(timeID);  };
