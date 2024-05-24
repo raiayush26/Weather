@@ -1,0 +1,130 @@
+.input-suggestion {
+    display: inline-block;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #c22424;
+  border-radius: 5px;
+  font-size: 16px;
+}
+.weather-report{
+    display: flex;
+    margin-top: 45px;
+    margin-left: 200px;
+   
+    word-wrap: break-word;
+ 
+  justify-content: center;
+   
+    border: 1px solid #c22424;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: antiquewhite;
+    height: 450px;
+    width: 900px;
+}
+.weather-city{
+    display: flex;
+    margin-top: 4rem;
+    margin-left: 200px;
+}
+.weather-temp{
+    display: flex;
+    margin-top: 0.5rem;
+    margin-left: 200px;
+}
+.weather-speed{
+    display: flex;
+    margin-top: 0.5rem;
+    margin-left: 200px;
+}
+.weather-humidity{
+    display: flex;
+    margin-top: 0.5rem;
+    margin-left: 200px;
+}
+.loading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+  font-size: 30px;
+  
+}
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #FFF;
+  border-bottom-color: #FF3D00;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  }
+
+  @keyframes rotation {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+  } 
+.country-name{
+  cursor: context-menu;
+}
+.temp-place{
+  display: inline-block;
+  align-items: center;
+}
+.temp-place button{
+  background-color: #c22424;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+@media screen and (max-width: 600px) {
+  .weather-report{
+    display: flex;
+    margin-top: 45px;
+    margin-left: 10px;
+    
+    border-radius: 20px;
+    font-size: 16px;
+    background-color: rgb(215, 250, 215);
+    height: 500px;
+    width: 300px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .weather-city{
+    display: flex;
+    margin-top: 45px;
+    margin-left: 1px;
+}
+.weather-temp{
+    display: flex;
+    margin-top: 10px;
+    margin-left: 6px;
+}
+.weather-speed{
+    display: flex;
+    margin-top: 4px;
+    margin-left: 6px;
+}
+.weather-humidity{
+    display: flex;
+    margin-top: 0.2rem;
+    margin-left: 6px;
+}
+.loading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+  font-size: 30px;
+  
+}
+}
