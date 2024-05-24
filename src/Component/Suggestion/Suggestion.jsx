@@ -9,9 +9,13 @@ function Suggest() {
   const [airQuality,setAirQuality] = useState("");
   const [showLoading, setShowLoading] = useState(true);
   const [currentPosition, setCurrentPosition] = useState([]);
-  const GeoapifyKeys=import.meta.env.GeoapifyKeys;
-  const weatherKey=import.meta.env.weatherKey;
-  
+  const GeoapifyKeys=import.meta.env.VITE_GeoapifyKeys;
+  const weatherKey=import.meta.env.VITE_WeatherKey;
+   
+ useEffect(()=> {
+  console.log(GeoapifyKeys);
+  console.log(weatherKey);
+  },[])
 
   useEffect(()=>{
     if(city != ""){
@@ -53,7 +57,7 @@ useEffect(() => {
   let url = `https://api.openweathermap.org/data/2.5/weather?lat=${currentPosition[0]}&lon=${currentPosition[1]}&appid=${weatherKey}&units=metric`;
   let url2 = `http://api.openweathermap.org/data/2.5/air_pollution/forecast?lat=${currentPosition[0]}&lon=${currentPosition[1]}&appid=${weatherKey}`;
 
-
+ console.log(url2);
   fetch(url2).then(response => response.json()).then(data => {
     console.log(data.list[0].main.aqi);
     if(data.list[0].main.aqi === 1){
